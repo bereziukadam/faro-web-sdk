@@ -69,8 +69,11 @@ export class FetchTransport extends BaseTransport {
       this.worker.onmessage = (e: MessageEvent<WorkerMessage>) => this.handleWorkerMessage(e.data);
       this.worker.onerror = () => this.handleWorkerError();
     } catch {
-      // CSP restrictions or other issues — fall back to main-thread transport
       this.worker = null;
+      this.logWarn(
+        'Faro transport Worker could not be created — falling back to main-thread transport. ' +
+          "If your site uses a Content-Security-Policy, add \"worker-src 'self' blob:;\" to enable the Worker transport."
+      );
     }
   }
 
