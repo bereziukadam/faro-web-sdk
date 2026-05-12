@@ -137,7 +137,9 @@ export class FetchTransport extends BaseTransport {
   }
 
   private async sendViaWorker(items: TransportItem[]): Promise<void> {
-    const { url, requestOptions, apiKey } = this.options;
+    const { requestOptions, apiKey } = this.options;
+    // Resolve relative URLs against page origin — blob workers have no base URL
+    const url = new URL(this.options.url, document.baseURI).href;
     const { headers = {}, ...restOfRequestOptions } = requestOptions ?? {};
 
     const resolvedHeaders: Record<string, string> = {};
