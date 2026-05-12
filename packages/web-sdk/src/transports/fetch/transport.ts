@@ -56,6 +56,10 @@ export class FetchTransport extends BaseTransport {
   }
 
   private initWorker(): void {
+    if (this.options.disableWorker) {
+      return;
+    }
+
     try {
       if (typeof Worker === 'undefined') {
         return;

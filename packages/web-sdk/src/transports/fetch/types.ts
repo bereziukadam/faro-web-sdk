@@ -27,6 +27,8 @@ export interface FetchTransportOptions {
   getNow?: ClockFn;
   // addition options for global.Fetch
   requestOptions?: FetchTransportRequestOptions;
+  // skip Worker creation and always use main-thread transport
+  disableWorker?: boolean;
 }
 
 export type ClockFn = () => number;
