@@ -16,6 +16,7 @@ demo/vite.config.ts.timestamp-*.mjs
 dist
 node_modules
 packages/core/src/version.ts
+packages/web-sdk/src/transports/fetch/workerScript.generated.ts
 
 # Logs
 *.log
