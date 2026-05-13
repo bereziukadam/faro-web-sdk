@@ -50,7 +50,10 @@ const transportItemTypeToBodyKey: Record<string, string> = {
   [TRANSPORT_ITEM_TYPE.EVENT]: 'events',
 };
 
-function mergeResourceSpans(traces: Traces | undefined, resourceSpans: ResourceSpans[] | undefined): Traces | undefined {
+function mergeResourceSpans(
+  traces: Traces | undefined,
+  resourceSpans: ResourceSpans[] | undefined
+): Traces | undefined {
   if (resourceSpans === undefined) {
     return traces;
   }
