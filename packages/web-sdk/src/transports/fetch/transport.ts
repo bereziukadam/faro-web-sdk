@@ -76,7 +76,7 @@ export class FetchTransport extends BaseTransport {
       this.worker = null;
       this.logWarn(
         'Faro transport Worker could not be created — falling back to main-thread transport. ' +
-          "If your site uses a Content-Security-Policy, add \"worker-src 'self' blob:;\" to enable the Worker transport."
+          'If your site uses a Content-Security-Policy, add "worker-src \'self\' blob:;" to enable the Worker transport.'
       );
     }
   }
