@@ -464,7 +464,10 @@ describe('FetchTransport (Worker path)', () => {
     MockWorkerClass = jest.fn(() => mockWorkerInstance);
     (global as any).Worker = MockWorkerClass;
     (global as any).Blob = class Blob {
-      constructor(public parts: string[], public options: object) {}
+      constructor(
+        public parts: string[],
+        public options: object
+      ) {}
     };
     (global as any).URL.createObjectURL = jest.fn(() => 'blob:mock');
     (global as any).URL.revokeObjectURL = jest.fn();
