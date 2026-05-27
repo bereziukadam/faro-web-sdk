@@ -25,7 +25,8 @@ services:
       - '${GRAFANA_PLUGINS_PATH_LOCAL}:${GRAFANA_PLUGINS_PATH}'
       - '${GRAFANA_PLUGINS_PROVISIONING_PATH_LOCAL}:${GRAFANA_PLUGINS_PROVISIONING_PATH}'
     entrypoint:
-      - '${GRAFANA_HOME_PATH}/bin/grafana-server'
+      - '${GRAFANA_HOME_PATH}/bin/grafana'
+      - 'server'
       - '--homepath=${GRAFANA_HOME_PATH}'
       - '--config=${GRAFANA_CONFIG_PATH}/${GRAFANA_CONFIG_FILE}'
     ports:
@@ -54,7 +55,7 @@ services:
   alloy:
     env_file:
       - './.env'
-    image: 'grafana/alloy:v1.16.0@sha256:6e00cf7c5a692ff5f24844529416ed017d76fce922f8199004e73d5eca46b6b8'
+    image: 'grafana/alloy:v1.16.1@sha256:51aeb9d829239345070619dad3edd6873186f913c84f45b365b74574fcb38ec0'
     volumes:
       - '${ALLOY_CONFIG_PATH_LOCAL}:${ALLOY_CONFIG_PATH}'
     entrypoint:

@@ -2,6 +2,56 @@
 
 ## Next
 
+## [2.7.0](https://github.com/grafana/faro-web-sdk/compare/v2.6.3...v2.7.0) (2026-05-20)
+
+### Features
+
+- **core:** include git commit hash in app meta ([#2039](https://github.com/grafana/faro-web-sdk/issues/2039)) ([9c82ce4](https://github.com/grafana/faro-web-sdk/commit/9c82ce49bc6d02c8a9b9a83227f101ce224a79b8))
+
+### Bug Fixes
+
+- **core:** fall back to window when resolving Metro bundle id ([#2079](https://github.com/grafana/faro-web-sdk/issues/2079)) ([3cfd620](https://github.com/grafana/faro-web-sdk/commit/3cfd6204b7bc83e5c440c523b6287993ccfbd728))
+- **demo:** bind Tempo OTLP receiver to 0.0.0.0 so Alloy can reach it ([#2038](https://github.com/grafana/faro-web-sdk/issues/2038)) ([7a0af53](https://github.com/grafana/faro-web-sdk/commit/7a0af536a4a7254bf62473b20d04cf937ecd246a))
+- **demo:** use `grafana server` subcommand for Grafana 13 image ([#2035](https://github.com/grafana/faro-web-sdk/issues/2035)) ([5d92107](https://github.com/grafana/faro-web-sdk/commit/5d9210769e5e0752f41a3f543089397d9fe8149a))
+- **deps:** update npm-dependencies ([#2077](https://github.com/grafana/faro-web-sdk/issues/2077)) ([8574f55](https://github.com/grafana/faro-web-sdk/commit/8574f5579b8c84a829269aa7e19e76238daa6b6e))
+- pin package manager and disable yarn/npm scripts ([#2075](https://github.com/grafana/faro-web-sdk/issues/2075)) ([ef2d248](https://github.com/grafana/faro-web-sdk/commit/ef2d248259f99e3e712bceff0f6fc99f6b0d81e1))
+
+## [2.6.3](https://github.com/grafana/faro-web-sdk/compare/v2.6.2...v2.6.3) (2026-05-11)
+
+### Bug Fixes
+
+- **ci:** make release-please auto-tag on merge ([#2069](https://github.com/grafana/faro-web-sdk/issues/2069)) ([de9e2f0](https://github.com/grafana/faro-web-sdk/commit/de9e2f05c28ea5644a8f8647c41f8eb686e2736c))
+
+## [2.6.2](https://github.com/grafana/faro-web-sdk/compare/v2.6.1...v2.6.2) (2026-05-11)
+
+### Bug Fixes
+
+- **ci:** include ${component} in release-please PR title ([#2066](https://github.com/grafana/faro-web-sdk/issues/2066)) ([367aacc](https://github.com/grafana/faro-web-sdk/commit/367aacc76fbb4777a61da40652bbe891826e0039))
+
+## [2.6.1](https://github.com/grafana/faro-web-sdk/compare/v2.6.0...v2.6.1) (2026-05-11)
+
+### Bug Fixes
+
+- **ci:** set release-please PR title pattern with version ([#2063](https://github.com/grafana/faro-web-sdk/issues/2063)) ([4310b16](https://github.com/grafana/faro-web-sdk/commit/4310b1685b4963de539919a15edd797aa21d032b))
+
+## [2.6.0](https://github.com/grafana/faro-web-sdk/compare/v2.5.0...v2.6.0) (2026-05-11)
+
+### Features
+
+- **replay:** pause recording after user inactivity ([#2015](https://github.com/grafana/faro-web-sdk/issues/2015)) ([fedbe7f](https://github.com/grafana/faro-web-sdk/commit/fedbe7ff41c592a7782737ea2200680cf8796800))
+- **web-sdk:** add `httpHost` to `faro.performance.resource` events ([#2014](https://github.com/grafana/faro-web-sdk/issues/2014)) ([517d26f](https://github.com/grafana/faro-web-sdk/commit/517d26f17f96d21990e52c5804a0b77676f685df))
+
+### Bug Fixes
+
+- **ci:** anchor release-please at v2.5.0 commit on main ([#2061](https://github.com/grafana/faro-web-sdk/issues/2061)) ([9a99abf](https://github.com/grafana/faro-web-sdk/commit/9a99abf6c119c17652335880d0116321d0036a1e))
+- **ci:** consolidate release-please into single changelog and unblock release PR ([#2048](https://github.com/grafana/faro-web-sdk/issues/2048)) ([1454048](https://github.com/grafana/faro-web-sdk/commit/14540489ca20ff2e1797700f14e440a7ea637709))
+- **ci:** correct jsonpath syntax in release-please extra-files ([#2049](https://github.com/grafana/faro-web-sdk/issues/2049)) ([0ca2dfe](https://github.com/grafana/faro-web-sdk/commit/0ca2dfe5d833c871ed115b9ed07854ea4e4fdbfb))
+- **ci:** correct release-please changelog-path to unblock release flow ([#2045](https://github.com/grafana/faro-web-sdk/issues/2045)) ([1682dd9](https://github.com/grafana/faro-web-sdk/commit/1682dd9b959f7ac336d61fd65b91838e9166e87c))
+- **ci:** exclude CHANGELOG.md from markdownlint ([#2062](https://github.com/grafana/faro-web-sdk/issues/2062)) ([844256b](https://github.com/grafana/faro-web-sdk/commit/844256be8dfaf615c254f65bacb958c4a7eebfb4))
+- **ci:** pre-format release-please PR to satisfy prettier check ([#2051](https://github.com/grafana/faro-web-sdk/issues/2051)) ([848ad90](https://github.com/grafana/faro-web-sdk/commit/848ad907e7b1dc8b866b10335b3ecce3354e99a2))
+- **ci:** two-stage yarn install in release-please cleanup step ([#2053](https://github.com/grafana/faro-web-sdk/issues/2053)) ([b87bd7c](https://github.com/grafana/faro-web-sdk/commit/b87bd7c5e50eb76555a2477b0bdecda43c6ff473))
+- **deps:** update npm-dependencies ([#2058](https://github.com/grafana/faro-web-sdk/issues/2058)) ([7f4f4d5](https://github.com/grafana/faro-web-sdk/commit/7f4f4d5f679671f04cdab654c194bdbb9ed42332))
+
 ## 2.5.0
 
 - Fix (`@grafana/faro-web-sdk`): Use monotonic clock instead of wall clock for duration
