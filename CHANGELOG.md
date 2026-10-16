@@ -4,6 +4,8 @@
 
 ### Features
 
+- **web-sdk:** add `PersistentFetchTransport` with native IndexedDB event persistence, startup replay, and age/count limits
+
 - **web-sdk:** report rage clicks, dead clicks and error clicks as frustration events by default
 - **user-actions:** add configurable initial activity timeouts globally, through `startUserAction`, and with
   `data-faro-user-action-timeout` element overrides

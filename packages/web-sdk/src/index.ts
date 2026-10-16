@@ -25,11 +25,13 @@ export type { ErrorEvent, ExtendedPromiseRejectionEvent } from './instrumentatio
 
 export { browserMeta, createSession, osMeta, sdkMeta } from './metas';
 
-export { ConsoleTransport, FetchTransport } from './transports';
+export { ConsoleTransport, FetchTransport, PersistentFetchTransport } from './transports';
 export type {
   ClockFn,
   ConsoleTransportOptions,
   FetchTransportOptions,
+  PersistentFetchTransportOptions,
+  PersistentTransportDropEvent,
   FetchTransportRequestOptions,
   RandomFn,
   RetryOptions,
